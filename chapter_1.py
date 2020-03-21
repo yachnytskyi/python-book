@@ -1,3 +1,5 @@
+import this
+
 print("Languages: C#\nJava\nRuby\n\tPython\n\t\tPhP\n\t\t\tJavaScript")
 
 language = "C# "
