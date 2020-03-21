@@ -2,3 +2,7 @@
 *.xml
 *.xml
 .idea/workspace.xml
+*.xml
+*.xml
+*.xml
+.idea/python-book.iml
