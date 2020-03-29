@@ -153,6 +153,7 @@ while sandwichesOrders:
 
 print(finishedSandwiches)
 
+favoritePlaces = ['grand canyon', 'texas', 'yellowstone']
 responses = {}
 active = True
 
@@ -161,12 +162,18 @@ while active:
     response = input("Which place in the world do you dream to visit?")
     responses[name] = response
 
+    if response in favoritePlaces:
+            print(f"{name}, tha's interesting. {response} is my favorite place as well!")
+
     repeat = input("Would you like to let another person respond? (yes/no) ")
     if repeat == 'no':
-        active = False
+       active = False
 
 for key, value in responses.items():
     print(f"{key} wants to go {value}")
+
+
+print(responses)
 
 
 sandwichesOrders = {
