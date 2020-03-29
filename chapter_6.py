@@ -138,3 +138,52 @@ while active:
 # a = 5
 # while a == 5:
 #     print(a)
+
+print("The dely has run out of pastrami")
+sandwichesOrders = ['1', 'pastrami', '2', 'pastrami', '3', '4', 'pastrami', '5']
+finishedSandwiches = []
+while sandwichesOrders:
+    if 'pastrami' in sandwichesOrders:
+        sandwichesOrders.remove('pastrami')
+
+    else:
+        sandwich = sandwichesOrders.pop()
+        print(f"I have made a {sandwich} for you")
+        finishedSandwiches.append(sandwich)
+
+print(finishedSandwiches)
+
+responses = {}
+active = True
+
+while active:
+    name = input("What is your name?")
+    response = input("Which place in the world do you dream to visit?")
+    responses[name] = response
+
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == 'no':
+        active = False
+
+for key, value in responses.items():
+    print(f"{key} wants to go {value}")
+
+
+sandwichesOrders = {
+    'main': {
+        'sandwiches': ['1', 'pastrami', '2', 'pastrami', '3', '4', 'pastrami', '5']
+    },
+    'other': {
+        'sandwiches': ['1', 'pastrami', '2', 'pastrami', '3', '4', 'pastrami', '5']
+    }
+}
+
+finishedSandwiches = {}
+
+active = True
+while active:
+    place = input("Please enter your pizzeria")
+    for key, value in sandwichesOrders.items():
+        if place == key:
+            for k, v in sandwichesOrders[key].items():
+                print(f"This is {key} sandwiches: {sandwichesOrders[key]['sandwiches']}")
