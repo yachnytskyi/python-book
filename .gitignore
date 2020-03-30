@@ -6,3 +6,9 @@
 *.xml
 *.xml
 .idea/python-book.iml
+venv/bin/activate
+*.csh
+*.fish
+*.ps1
+venv/bin/easy_install
+*.pyc
