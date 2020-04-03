@@ -1,0 +1,16 @@
+{'constantine': {'reason': 'cool'}}
+{'costya': {'reason': 'cool'}}
+{'cos': {'reason': 'ds'}}
+{'cost': {'reason': 'dsd'}}
+{'cost': {'reason': 'dsa'}}
+['cool']
+['cool', "it's cool"]
+["it's cool"]
+["it's cool", 'I love it!']
+['Amazing', 'Cool', 'Wonderful!']
+Constantine likes programming because: ['Cool!', 'Sure!']
+Constantine likes programming because: ["It's interesting", 'Amazing', 'Cool!']
+Constantine likes programming because: {'Constantine': {'reason': 'amazing'}}
+Constantine likes programming because: {'Constantine': {'reason': 'wonderful'}}
+Constantine likes programming because: {'Constantine': {'test': 'test', 'test1': 'test1'}}
+Constantine likes programming because: {'Constantine': {'test': 'test', 'test1': 'test1', 'test3': 'test3'}}
