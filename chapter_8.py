@@ -1,81 +1,58 @@
-# class Restaurant:
-#
-#     def __init__(self, name, cuisine, numberServed):
-#         self.numberServed = 0
-#         self.name = name
-#         self.cuisine = cuisine
-#
-#     def describeRestaurant(self):
-#         print(f"The restaurant {self.name.title()} welcomes you. Our cuisine: {self.cuisine.title()}")
-#
-#     def openRestaurant(self):
-#         print(f"The restaurant {self.name.title()} is open!")
-#
-#     def makeDictionary(self):
-#         restaurant = {self.cuisine: {}}
-#         restaurant[self.cuisine]['name'] = self.name
-#         print(restaurant)
-#
-#     def setNumberServed(self, number):
-#         self.numberServed = number
-#
-#     def incrementNumberServed(self, number):
-#         if number < 0:
-#             number = number * (-1)
-#
-#         self.numberServed += number
-#
-#
-# a = Restaurant('dragon', 'chinese', 52)
-# print(f"{a.name.title()} and {a.cuisine.title}")
-# a.describeRestaurant()
-# a.openRestaurant()
-# a.makeDictionary()
-# b = Restaurant('puzata hata', 'ukrainian', 23)
-# c = Restaurant('mushlya', 'seafood', 45)
-# b.describeRestaurant()
-# c.describeRestaurant()
-# b.openRestaurant()
-# c.openRestaurant()
-# b.makeDictionary()
-# c.makeDictionary()
-# d = Restaurant('Tokugawa', 'japanese', 52)
-# print(d.numberServed)
-# d.numberServed = 52
-# print(d.numberServed)
-# d.setNumberServed(13)
-# print(d.numberServed)
-# d.incrementNumberServed(2)
-# print(d.numberServed)
-# d.incrementNumberServed(-2)
-# print(d.numberServed)
-
-class User:
-
-    def __init__(self, firstName, lastName, age, loginAttempts):
-        self.loginAttempts = 0
-        self.firstName = firstName
-        self.lastName = lastName
-        self.age = age
-
-    def describeUser(self):
-        print(f" Your first name is: {self.firstName.title()},\n Your last name is: {self.lastName.title()},\n Your "
-              f"age is: {self.age}")
-
-    def greetUser(self):
-        fullName = self.firstName + " " + self.lastName
-        print(f"Hello {fullName.title()}, I'm glad to see you again!")
-
-    def incrementLoginAttemps(self):
-        self.loginAttempts += 1
-
-    def resetLoginAttempts(self):
-        self.loginAttempts = 0
+import restaurant_chapter_8 as restaurant
+import user_chapter_8 as user
+import admin_chapter_8 as admin
+from collections import OrderedDict
+from random import randint
 
 
-a = User("constantine", "yachnytskyi", "27", 2)
-b = User("ingrid", "korsgard", "28", 3)
-c = User("kate", "sporysh", "29", 4)
+
+class IceCreamStand(restaurant.Restaurant):
+
+    def __init__(self, name, cuisine, numberServed, flavors):
+        super().__init__(name, cuisine, numberServed)
+        self.flavors = flavors
+
+    def showFlawords(self):
+        if isinstance(self.flavors, list):
+            print(self.flavors)
+        else:
+            print("You can use only list")
+
+
+g = IceCreamStand('dragon', 'chinese', 152, ['rose', 'mushrooms', 'flowers'])
+g.showFlawords()
+a = restaurant.Restaurant('dragon', 'chinese', 52)
+print(f"{a.name.title()} and {a.cuisine.title}")
+a.describeRestaurant()
+a.openRestaurant()
+a.makeDictionary()
+b = restaurant.Restaurant('puzata hata', 'ukrainian', 23)
+c = restaurant.Restaurant('mushlya', 'seafood', 45)
+b.describeRestaurant()
+c.describeRestaurant()
+b.openRestaurant()
+c.openRestaurant()
+b.makeDictionary()
+c.makeDictionary()
+d = restaurant.Restaurant('Tokugawa', 'japanese', 52)
+print(d.numberServed)
+d.numberServed = 52
+print(d.numberServed)
+d.setNumberServed(13)
+print(d.numberServed)
+d.incrementNumberServed(2)
+print(d.numberServed)
+d.incrementNumberServed(-2)
+print(d.numberServed)
+
+
+a = admin.Admin("kostya", 'yachnytskyi', 27, 1)
+a.describeUser()
+a.greetUser()
+a.privileges.showPrivileges()
+a = user.User("constantine", "yachnytskyi", "27", 2)
+b = user.User("ingrid", "korsgard", "28", 3)
+c = user.User("kate", "sporysh", "29", 4)
 a.describeUser()
 a.greetUser()
 b.describeUser()
@@ -90,3 +67,40 @@ a.incrementLoginAttemps()
 print(a.loginAttempts)
 a.resetLoginAttempts()
 print(a.loginAttempts)
+
+class Battery:
+    def __init__(self, batterySize):
+        self.batterySize = batterySize
+
+    def checkBatterySize(self):
+        if self.batterySize != 85:
+            self.batterySize = 85
+            return  self.batterySize
+
+a = OrderedDict()
+a['a'] = 5
+a['b'] = 6
+a['c'] = 7
+a['d'] = 9
+
+print(a)
+
+
+class Die:
+    def __init__(self, sides=6):
+        self.sides = sides
+
+    def rollDie(self):
+        for x in range(0, 10):
+            x = randint(1, self.sides)
+            print(x)
+
+        return x
+
+
+a = Die()
+a.rollDie()
+b = Die(20)
+b.rollDie()
+
+
