@@ -1,0 +1,4 @@
+In Python you can do everything!
+In Python you can create websites!
+In Python you can work with machine learning!
+In Python you can do DevOps operations!
