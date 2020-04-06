@@ -20,7 +20,6 @@ radius = 42
 area = radius * 3.1415926 ** 2
 print(round(area))
 
-# Далее, пусть есть координаты точки
 point_1 = (23, 34)
 print(math.sqrt(point_1[0] ** 2 + point_1[1] ** 2) <= area)
 
